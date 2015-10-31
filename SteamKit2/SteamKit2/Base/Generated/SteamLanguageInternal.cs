@@ -6,28 +6,34 @@ using System.Runtime.InteropServices;
 
 namespace SteamKit2.Internal
 {
+	[SteamLanguageGenerated]
 	public interface ISteamSerializable
 	{
 		void Serialize(Stream stream);
 		void Deserialize( Stream stream );
 	}
+	[SteamLanguageGenerated]
 	public interface ISteamSerializableHeader : ISteamSerializable
 	{
 		void SetEMsg( EMsg msg );
 	}
+	[SteamLanguageGenerated]
 	public interface ISteamSerializableMessage : ISteamSerializable
 	{
 		EMsg GetEMsg();
 	}
+	[SteamLanguageGenerated]
 	public interface IGCSerializableHeader : ISteamSerializable
 	{
 		void SetEMsg( uint msg );
 	}
+	[SteamLanguageGenerated]
 	public interface IGCSerializableMessage : ISteamSerializable
 	{
 		uint GetEMsg();
 	}
 
+	[SteamLanguageGenerated]
 	public class UdpHeader : ISteamSerializable
 	{
 		public static readonly uint MAGIC = 0x31305356;
@@ -105,6 +111,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class ChallengeData : ISteamSerializable
 	{
 		public static readonly uint CHALLENGE_MASK = 0xA426DF2B;
@@ -137,6 +144,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class ConnectData : ISteamSerializable
 	{
 		public static readonly uint CHALLENGE_MASK = ChallengeData.CHALLENGE_MASK;
@@ -164,6 +172,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class Accept : ISteamSerializable
 	{
 
@@ -183,6 +192,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class Datagram : ISteamSerializable
 	{
 
@@ -202,6 +212,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class Disconnect : ISteamSerializable
 	{
 
@@ -222,6 +233,7 @@ namespace SteamKit2.Internal
 	}
 
 	[StructLayout( LayoutKind.Sequential )]
+	[SteamLanguageGenerated]
 	public class MsgHdr : ISteamSerializableHeader
 	{
 		public void SetEMsg( EMsg msg ) { this.Msg = msg; }
@@ -261,6 +273,7 @@ namespace SteamKit2.Internal
 	}
 
 	[StructLayout( LayoutKind.Sequential )]
+	[SteamLanguageGenerated]
 	public class ExtendedClientMsgHdr : ISteamSerializableHeader
 	{
 		public void SetEMsg( EMsg msg ) { this.Msg = msg; }
@@ -326,6 +339,7 @@ namespace SteamKit2.Internal
 	}
 
 	[StructLayout( LayoutKind.Sequential )]
+	[SteamLanguageGenerated]
 	public class MsgHdrProtoBuf : ISteamSerializableHeader
 	{
 		public void SetEMsg( EMsg msg ) { this.Msg = msg; }
@@ -370,6 +384,7 @@ namespace SteamKit2.Internal
 	}
 
 	[StructLayout( LayoutKind.Sequential )]
+	[SteamLanguageGenerated]
 	public class MsgGCHdrProtoBuf : IGCSerializableHeader
 	{
 		public void SetEMsg( uint msg ) { this.Msg = msg; }
@@ -414,6 +429,7 @@ namespace SteamKit2.Internal
 	}
 
 	[StructLayout( LayoutKind.Sequential )]
+	[SteamLanguageGenerated]
 	public class MsgGCHdr : IGCSerializableHeader
 	{
 		public void SetEMsg( uint msg ) { }
@@ -452,6 +468,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class MsgClientJustStrings : ISteamSerializableMessage
 	{
 		public EMsg GetEMsg() { return EMsg.Invalid; }
@@ -473,6 +490,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class MsgClientGenericResponse : ISteamSerializableMessage
 	{
 		public EMsg GetEMsg() { return EMsg.Invalid; }
@@ -501,6 +519,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class MsgChannelEncryptRequest : ISteamSerializableMessage
 	{
 		public EMsg GetEMsg() { return EMsg.ChannelEncryptRequest; }
@@ -535,6 +554,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class MsgChannelEncryptResponse : ISteamSerializableMessage
 	{
 		public EMsg GetEMsg() { return EMsg.ChannelEncryptResponse; }
@@ -568,6 +588,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class MsgChannelEncryptResult : ISteamSerializableMessage
 	{
 		public EMsg GetEMsg() { return EMsg.ChannelEncryptResult; }
@@ -596,6 +617,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class MsgClientNewLoginKey : ISteamSerializableMessage
 	{
 		public EMsg GetEMsg() { return EMsg.ClientNewLoginKey; }
@@ -629,6 +651,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class MsgClientNewLoginKeyAccepted : ISteamSerializableMessage
 	{
 		public EMsg GetEMsg() { return EMsg.ClientNewLoginKeyAccepted; }
@@ -657,6 +680,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class MsgClientLogon : ISteamSerializableMessage
 	{
 		public EMsg GetEMsg() { return EMsg.ClientLogon; }
@@ -701,6 +725,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class MsgClientVACBanStatus : ISteamSerializableMessage
 	{
 		public EMsg GetEMsg() { return EMsg.ClientVACBanStatus; }
@@ -729,6 +754,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class MsgClientAppUsageEvent : ISteamSerializableMessage
 	{
 		public EMsg GetEMsg() { return EMsg.ClientAppUsageEvent; }
@@ -768,6 +794,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class MsgClientEmailAddrInfo : ISteamSerializableMessage
 	{
 		public EMsg GetEMsg() { return EMsg.ClientEmailAddrInfo; }
@@ -807,6 +834,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class MsgClientUpdateGuestPassesList : ISteamSerializableMessage
 	{
 		public EMsg GetEMsg() { return EMsg.ClientUpdateGuestPassesList; }
@@ -845,6 +873,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class MsgClientRequestedClientStats : ISteamSerializableMessage
 	{
 		public EMsg GetEMsg() { return EMsg.ClientRequestedClientStats; }
@@ -873,6 +902,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class MsgClientP2PIntroducerMessage : ISteamSerializableMessage
 	{
 		public EMsg GetEMsg() { return EMsg.ClientP2PIntroducerMessage; }
@@ -917,6 +947,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class MsgClientOGSBeginSession : ISteamSerializableMessage
 	{
 		public EMsg GetEMsg() { return EMsg.ClientOGSBeginSession; }
@@ -961,6 +992,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class MsgClientOGSBeginSessionResponse : ISteamSerializableMessage
 	{
 		public EMsg GetEMsg() { return EMsg.ClientOGSBeginSessionResponse; }
@@ -1006,6 +1038,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class MsgClientOGSEndSession : ISteamSerializableMessage
 	{
 		public EMsg GetEMsg() { return EMsg.ClientOGSEndSession; }
@@ -1049,6 +1082,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class MsgClientOGSEndSessionResponse : ISteamSerializableMessage
 	{
 		public EMsg GetEMsg() { return EMsg.ClientOGSEndSessionResponse; }
@@ -1077,6 +1111,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class MsgClientOGSWriteRow : ISteamSerializableMessage
 	{
 		public EMsg GetEMsg() { return EMsg.ClientOGSWriteRow; }
@@ -1110,6 +1145,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class MsgClientGetFriendsWhoPlayGame : ISteamSerializableMessage
 	{
 		public EMsg GetEMsg() { return EMsg.ClientGetFriendsWhoPlayGame; }
@@ -1139,6 +1175,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class MsgClientGetFriendsWhoPlayGameResponse : ISteamSerializableMessage
 	{
 		public EMsg GetEMsg() { return EMsg.ClientGetFriendsWhoPlayGameResponse; }
@@ -1178,6 +1215,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class MsgGSPerformHardwareSurvey : ISteamSerializableMessage
 	{
 		public EMsg GetEMsg() { return EMsg.GSPerformHardwareSurvey; }
@@ -1206,6 +1244,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class MsgGSGetPlayStatsResponse : ISteamSerializableMessage
 	{
 		public EMsg GetEMsg() { return EMsg.GSGetPlayStatsResponse; }
@@ -1249,6 +1288,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class MsgGSGetReputationResponse : ISteamSerializableMessage
 	{
 		public EMsg GetEMsg() { return EMsg.GSGetReputationResponse; }
@@ -1308,6 +1348,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class MsgGSDeny : ISteamSerializableMessage
 	{
 		public EMsg GetEMsg() { return EMsg.GSDeny; }
@@ -1342,6 +1383,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class MsgGSApprove : ISteamSerializableMessage
 	{
 		public EMsg GetEMsg() { return EMsg.GSApprove; }
@@ -1371,6 +1413,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class MsgGSKick : ISteamSerializableMessage
 	{
 		public EMsg GetEMsg() { return EMsg.GSKick; }
@@ -1410,6 +1453,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class MsgGSGetUserGroupStatus : ISteamSerializableMessage
 	{
 		public EMsg GetEMsg() { return EMsg.GSGetUserGroupStatus; }
@@ -1445,6 +1489,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class MsgGSGetUserGroupStatusResponse : ISteamSerializableMessage
 	{
 		public EMsg GetEMsg() { return EMsg.GSGetUserGroupStatusResponse; }
@@ -1490,6 +1535,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class MsgClientJoinChat : ISteamSerializableMessage
 	{
 		public EMsg GetEMsg() { return EMsg.ClientJoinChat; }
@@ -1525,6 +1571,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class MsgClientChatEnter : ISteamSerializableMessage
 	{
 		public EMsg GetEMsg() { return EMsg.ClientChatEnter; }
@@ -1592,6 +1639,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class MsgClientChatMsg : ISteamSerializableMessage
 	{
 		public EMsg GetEMsg() { return EMsg.ClientChatMsg; }
@@ -1632,6 +1680,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class MsgClientChatMemberInfo : ISteamSerializableMessage
 	{
 		public EMsg GetEMsg() { return EMsg.ClientChatMemberInfo; }
@@ -1666,6 +1715,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class MsgClientChatAction : ISteamSerializableMessage
 	{
 		public EMsg GetEMsg() { return EMsg.ClientChatAction; }
@@ -1706,6 +1756,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class MsgClientChatActionResult : ISteamSerializableMessage
 	{
 		public EMsg GetEMsg() { return EMsg.ClientChatActionResult; }
@@ -1751,6 +1802,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class MsgClientChatRoomInfo : ISteamSerializableMessage
 	{
 		public EMsg GetEMsg() { return EMsg.ClientChatRoomInfo; }
@@ -1785,6 +1837,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class MsgClientGetNumberOfCurrentPlayers : ISteamSerializableMessage
 	{
 		public EMsg GetEMsg() { return EMsg.ClientGetNumberOfCurrentPlayers; }
@@ -1814,6 +1867,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class MsgClientGetNumberOfCurrentPlayersResponse : ISteamSerializableMessage
 	{
 		public EMsg GetEMsg() { return EMsg.ClientGetNumberOfCurrentPlayersResponse; }
@@ -1847,6 +1901,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class MsgClientSetIgnoreFriend : ISteamSerializableMessage
 	{
 		public EMsg GetEMsg() { return EMsg.ClientSetIgnoreFriend; }
@@ -1887,6 +1942,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class MsgClientSetIgnoreFriendResponse : ISteamSerializableMessage
 	{
 		public EMsg GetEMsg() { return EMsg.ClientSetIgnoreFriendResponse; }
@@ -1920,6 +1976,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class MsgClientLoggedOff : ISteamSerializableMessage
 	{
 		public EMsg GetEMsg() { return EMsg.ClientLoggedOff; }
@@ -1958,6 +2015,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class MsgClientLogOnResponse : ISteamSerializableMessage
 	{
 		public EMsg GetEMsg() { return EMsg.ClientLogOnResponse; }
@@ -2012,6 +2070,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class MsgClientSendGuestPass : ISteamSerializableMessage
 	{
 		public EMsg GetEMsg() { return EMsg.ClientSendGuestPass; }
@@ -2050,6 +2109,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class MsgClientSendGuestPassResponse : ISteamSerializableMessage
 	{
 		#pragma warning disable 0612
@@ -2080,6 +2140,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class MsgClientServerUnavailable : ISteamSerializableMessage
 	{
 		public EMsg GetEMsg() { return EMsg.ClientServerUnavailable; }
@@ -2118,6 +2179,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class MsgClientCreateChat : ISteamSerializableMessage
 	{
 		public EMsg GetEMsg() { return EMsg.ClientCreateChat; }
@@ -2195,6 +2257,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class MsgClientCreateChatResponse : ISteamSerializableMessage
 	{
 		public EMsg GetEMsg() { return EMsg.ClientCreateChatResponse; }
@@ -2240,6 +2303,7 @@ namespace SteamKit2.Internal
 		}
 	}
 
+	[SteamLanguageGenerated]
 	public class MsgClientMarketingMessageUpdate2 : ISteamSerializableMessage
 	{
 		public EMsg GetEMsg() { return EMsg.ClientMarketingMessageUpdate2; }

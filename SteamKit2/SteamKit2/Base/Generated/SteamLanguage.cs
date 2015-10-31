@@ -6,6 +6,7 @@ using System.Runtime.InteropServices;
 
 namespace SteamKit2
 {
+	[SteamLanguageGenerated]
 	public enum EMsg
 	{
 		Invalid = 0,
@@ -1811,6 +1812,7 @@ namespace SteamKit2
 		ClientVoiceCallPreAuthorize = 9800,
 		ClientVoiceCallPreAuthorizeResponse = 9801,
 	}
+	[SteamLanguageGenerated]
 	public enum EResult
 	{
 		Invalid = 0,
@@ -1933,6 +1935,7 @@ namespace SteamKit2
 		NotSettled = 100,
 		NeedCaptcha = 101,
 	}
+	[SteamLanguageGenerated]
 	public enum EUniverse
 	{
 		Invalid = 0,
@@ -1942,6 +1945,7 @@ namespace SteamKit2
 		Dev = 4,
 		Max = 5,
 	}
+	[SteamLanguageGenerated]
 	public enum EChatEntryType
 	{
 		Invalid = 0,
@@ -1962,6 +1966,7 @@ namespace SteamKit2
 		Reserved2 = 13,
 		LinkBlocked = 14,
 	}
+	[SteamLanguageGenerated]
 	public enum EPersonaState
 	{
 		Offline = 0,
@@ -1973,6 +1978,7 @@ namespace SteamKit2
 		LookingToPlay = 6,
 		Max = 7,
 	}
+	[SteamLanguageGenerated]
 	public enum EAccountType
 	{
 		Invalid = 0,
@@ -1988,6 +1994,7 @@ namespace SteamKit2
 		AnonUser = 10,
 		Max = 11,
 	}
+	[SteamLanguageGenerated]
 	public enum EFriendRelationship
 	{
 		None = 0,
@@ -2001,6 +2008,7 @@ namespace SteamKit2
 		Max = 8,
 	}
 	[Flags]
+	[SteamLanguageGenerated]
 	public enum EAccountFlags
 	{
 		NormalUser = 0,
@@ -2034,6 +2042,7 @@ namespace SteamKit2
 		GlobalModerator = 134217728,
 	}
 	[Flags]
+	[SteamLanguageGenerated]
 	public enum EClanPermission
 	{
 		Nobody = 0,
@@ -2053,6 +2062,7 @@ namespace SteamKit2
 		Anybody = NonMember | Member | Moderator | Officer | Owner,
 	}
 	[Flags]
+	[SteamLanguageGenerated]
 	public enum EChatPermission
 	{
 		Close = 1,
@@ -2072,6 +2082,7 @@ namespace SteamKit2
 		Mask = 1019,
 	}
 	[Flags]
+	[SteamLanguageGenerated]
 	public enum EFriendFlags
 	{
 		None = 0,
@@ -2088,6 +2099,7 @@ namespace SteamKit2
 		FlagAll = 65535,
 	}
 	[Flags]
+	[SteamLanguageGenerated]
 	public enum EPersonaStateFlag
 	{
 		HasRichPresence = 1,
@@ -2097,6 +2109,7 @@ namespace SteamKit2
 		OnlineUsingBigPicture = 1024,
 	}
 	[Flags]
+	[SteamLanguageGenerated]
 	public enum EClientPersonaStateFlag
 	{
 		Status = 1,
@@ -2112,6 +2125,7 @@ namespace SteamKit2
 		ClanTag = 1024,
 		Facebook = 2048,
 	}
+	[SteamLanguageGenerated]
 	public enum EAppUsageEvent
 	{
 		GameLaunch = 1,
@@ -2124,6 +2138,7 @@ namespace SteamKit2
 		GameLaunchFreeWeekend = 8,
 	}
 	[Flags]
+	[SteamLanguageGenerated]
 	public enum ELicenseFlags
 	{
 		None = 0,
@@ -2136,6 +2151,7 @@ namespace SteamKit2
 		LowViolenceContent = 0x40,
 		ImportedFromSteam2 = 0x80,
 	}
+	[SteamLanguageGenerated]
 	public enum ELicenseType
 	{
 		NoLicense = 0,
@@ -2146,6 +2162,7 @@ namespace SteamKit2
 		RecurringChargeLimitedUseWithOverages = 5,
 		RecurringOption = 6,
 	}
+	[SteamLanguageGenerated]
 	public enum EPaymentMethod
 	{
 		None = 0,
@@ -2223,6 +2240,7 @@ namespace SteamKit2
 		Split = 512,
 		Complimentary = 1024,
 	}
+	[SteamLanguageGenerated]
 	public enum EIntroducerRouting
 	{
 		[Obsolete]
@@ -2231,6 +2249,7 @@ namespace SteamKit2
 		P2PNetworking = 2,
 	}
 	[Flags]
+	[SteamLanguageGenerated]
 	public enum EServerFlags
 	{
 		None = 0,
@@ -2241,6 +2260,7 @@ namespace SteamKit2
 		Passworded = 16,
 		Private = 32,
 	}
+	[SteamLanguageGenerated]
 	public enum EDenyReason
 	{
 		InvalidVersion = 1,
@@ -2259,6 +2279,7 @@ namespace SteamKit2
 		SteamValidationStalled = 14,
 		SteamOwnerLeftGuestUser = 15,
 	}
+	[SteamLanguageGenerated]
 	public enum EClanRank
 	{
 		None = 0,
@@ -2267,6 +2288,7 @@ namespace SteamKit2
 		Member = 3,
 		Moderator = 4,
 	}
+	[SteamLanguageGenerated]
 	public enum EClanRelationship
 	{
 		None = 0,
@@ -2276,6 +2298,7 @@ namespace SteamKit2
 		Kicked = 4,
 		KickAcknowledged = 5,
 	}
+	[SteamLanguageGenerated]
 	public enum EAuthSessionResponse
 	{
 		OK = 0,
@@ -2289,6 +2312,7 @@ namespace SteamKit2
 		AuthTicketInvalid = 8,
 		PublisherIssuedBan = 9,
 	}
+	[SteamLanguageGenerated]
 	public enum EChatRoomEnterResponse
 	{
 		Success = 1,
@@ -2309,18 +2333,21 @@ namespace SteamKit2
 		[Obsolete]
 		RankOutOfRange = 14,
 	}
+	[SteamLanguageGenerated]
 	public enum EChatRoomType
 	{
 		Friend = 1,
 		MUC = 2,
 		Lobby = 3,
 	}
+	[SteamLanguageGenerated]
 	public enum EChatInfoType
 	{
 		StateChange = 1,
 		InfoUpdate = 2,
 		MemberLimitChange = 3,
 	}
+	[SteamLanguageGenerated]
 	public enum EChatAction
 	{
 		InviteChat = 1,
@@ -2340,6 +2367,7 @@ namespace SteamKit2
 		SetModerated = 15,
 		SetUnmoderated = 16,
 	}
+	[SteamLanguageGenerated]
 	public enum EChatActionResult
 	{
 		Success = 1,
@@ -2353,6 +2381,7 @@ namespace SteamKit2
 		ChatFull = 9,
 		VoiceSlotsFull = 10,
 	}
+	[SteamLanguageGenerated]
 	public enum EAppInfoSection
 	{
 		Unknown = 0,
@@ -2378,6 +2407,7 @@ namespace SteamKit2
 		Store = 16,
 		Max = 17,
 	}
+	[SteamLanguageGenerated]
 	public enum EContentDownloadSourceType
 	{
 		Invalid = 0,
@@ -2387,6 +2417,7 @@ namespace SteamKit2
 		ProxyCache = 4,
 		Max = 5,
 	}
+	[SteamLanguageGenerated]
 	public enum EPlatformType
 	{
 		Unknown = 0,
@@ -2397,6 +2428,7 @@ namespace SteamKit2
 		PS3 = 5,
 		Max = 6,
 	}
+	[SteamLanguageGenerated]
 	public enum EOSType
 	{
 		Unknown = -1,
@@ -2448,6 +2480,7 @@ namespace SteamKit2
 		WinMAX = 15,
 		Max = 26,
 	}
+	[SteamLanguageGenerated]
 	public enum EServerType
 	{
 		Invalid = -1,
@@ -2528,6 +2561,7 @@ namespace SteamKit2
 		PNP = 66,
 		Max = 67,
 	}
+	[SteamLanguageGenerated]
 	public enum EBillingType
 	{
 		NoCost = 0,
@@ -2542,6 +2576,7 @@ namespace SteamKit2
 		RecurringOption = 9,
 		NumBillingTypes = 10,
 	}
+	[SteamLanguageGenerated]
 	public enum EActivationCodeClass : uint
 	{
 		WonCDKey = 0,
@@ -2554,6 +2589,7 @@ namespace SteamKit2
 		Invalid = 4294967295,
 	}
 	[Flags]
+	[SteamLanguageGenerated]
 	public enum EChatMemberStateChange
 	{
 		Entered = 0x01,
@@ -2564,6 +2600,7 @@ namespace SteamKit2
 		VoiceSpeaking = 0x1000,
 		VoiceDoneSpeaking = 0x2000,
 	}
+	[SteamLanguageGenerated]
 	public enum ERegionCode : byte
 	{
 		USEast = 0x00,
@@ -2576,6 +2613,7 @@ namespace SteamKit2
 		Africa = 0x07,
 		World = 0xFF,
 	}
+	[SteamLanguageGenerated]
 	public enum ECurrencyCode
 	{
 		Invalid = 0,
@@ -2614,6 +2652,7 @@ namespace SteamKit2
 		Max = 33,
 	}
 	[Flags]
+	[SteamLanguageGenerated]
 	public enum EDepotFileFlag
 	{
 		UserConfig = 1,
@@ -2626,6 +2665,7 @@ namespace SteamKit2
 		CustomExecutable = 128,
 		InstallScript = 256,
 	}
+	[SteamLanguageGenerated]
 	public enum EWorkshopEnumerationType
 	{
 		RankedByVote = 0,
@@ -2636,12 +2676,14 @@ namespace SteamKit2
 		ContentByFriends = 5,
 		RecentFromFollowedUsers = 6,
 	}
+	[SteamLanguageGenerated]
 	public enum EPublishedFileVisibility
 	{
 		Public = 0,
 		FriendsOnly = 1,
 		Private = 2,
 	}
+	[SteamLanguageGenerated]
 	public enum EWorkshopFileType
 	{
 		First = 0,
@@ -2663,11 +2705,13 @@ namespace SteamKit2
 		GameManagedItem = 15,
 		Max = 16,
 	}
+	[SteamLanguageGenerated]
 	public enum EWorkshopFileAction
 	{
 		Played = 0,
 		Completed = 1,
 	}
+	[SteamLanguageGenerated]
 	public enum EEconTradeResponse
 	{
 		Accepted = 0,
@@ -2698,6 +2742,7 @@ namespace SteamKit2
 		OKToDeliver = 50,
 	}
 	[Flags]
+	[SteamLanguageGenerated]
 	public enum EMarketingMessageFlags
 	{
 		None = 0,
@@ -2707,6 +2752,7 @@ namespace SteamKit2
 		PlatformLinux = 8,
 		PlatformRestrictions = PlatformWindows | PlatformMac | PlatformLinux,
 	}
+	[SteamLanguageGenerated]
 	public enum ENewsUpdateType
 	{
 		AppNews = 0,
@@ -2715,6 +2761,7 @@ namespace SteamKit2
 		CDDBUpdate = 3,
 		ClientUpdate = 4,
 	}
+	[SteamLanguageGenerated]
 	public enum ESystemIMType
 	{
 		RawText = 0,
@@ -2730,6 +2777,7 @@ namespace SteamKit2
 		Max = 10,
 	}
 	[Flags]
+	[SteamLanguageGenerated]
 	public enum EChatFlags
 	{
 		Locked = 1,
@@ -2738,6 +2786,7 @@ namespace SteamKit2
 		Unjoinable = 8,
 	}
 	[Flags]
+	[SteamLanguageGenerated]
 	public enum ERemoteStoragePlatform
 	{
 		None = 0,
@@ -2751,6 +2800,7 @@ namespace SteamKit2
 		All = -1,
 	}
 	[Flags]
+	[SteamLanguageGenerated]
 	public enum EDRMBlobDownloadType
 	{
 		Error = 0,
@@ -2763,6 +2813,7 @@ namespace SteamKit2
 		AddTimestamp = 32,
 		LowPriority = 64,
 	}
+	[SteamLanguageGenerated]
 	public enum EDRMBlobDownloadErrorDetail
 	{
 		None = 0,
@@ -2789,6 +2840,7 @@ namespace SteamKit2
 		TargetLocked_Max = 131071,
 		NextBase = 131072,
 	}
+	[SteamLanguageGenerated]
 	public enum EClientStat
 	{
 		P2PConnectionsUDP = 0,
@@ -2798,6 +2850,7 @@ namespace SteamKit2
 		BytesDownloaded = 4,
 		Max = 5,
 	}
+	[SteamLanguageGenerated]
 	public enum EClientStatAggregateMethod
 	{
 		LatestOnly = 0,
@@ -2805,6 +2858,7 @@ namespace SteamKit2
 		Event = 2,
 		Scalar = 3,
 	}
+	[SteamLanguageGenerated]
 	public enum ELeaderboardDataRequest
 	{
 		Global = 0,
@@ -2812,12 +2866,14 @@ namespace SteamKit2
 		Friends = 2,
 		Users = 3,
 	}
+	[SteamLanguageGenerated]
 	public enum ELeaderboardSortMethod
 	{
 		None = 0,
 		Ascending = 1,
 		Descending = 2,
 	}
+	[SteamLanguageGenerated]
 	public enum ELeaderboardDisplayType
 	{
 		None = 0,
@@ -2825,6 +2881,7 @@ namespace SteamKit2
 		TimeSeconds = 2,
 		TimeMilliSeconds = 3,
 	}
+	[SteamLanguageGenerated]
 	public enum ELeaderboardUploadScoreMethod
 	{
 		None = 0,
@@ -2832,6 +2889,7 @@ namespace SteamKit2
 		ForceUpdate = 2,
 	}
 	[Flags]
+	[SteamLanguageGenerated]
 	public enum EUCMFilePrivacyState
 	{
 		Invalid = -1,
@@ -2840,6 +2898,7 @@ namespace SteamKit2
 		Public = 8,
 		All = Public | FriendsOnly | Private,
 	}
+	[SteamLanguageGenerated]
 	public enum EUdpPacketType : byte
 	{
 		Invalid = 0,

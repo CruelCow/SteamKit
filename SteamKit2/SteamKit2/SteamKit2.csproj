@@ -127,6 +127,7 @@
     <Compile Include="Base\Generated\Unified\Steamworks\SteamMsgOAuthSteamworks.cs" />
     <Compile Include="Base\MsgBase.cs" />
     <Compile Include="Base\PacketBase.cs" />
+    <Compile Include="Base\SteamLanguageGeneratedAttribute.cs" />
     <Compile Include="Networking\Steam3\CMServerList.cs" />
     <Compile Include="Steam\CDNClient.cs" />
     <Compile Include="Steam\Handlers\SteamCloud\Callbacks.cs" />

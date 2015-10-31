@@ -44,17 +44,20 @@ namespace SteamLanguageParser
         {
             string padding = new String('\t', level);
 
+            sb.AppendLine(padding + "[SteamLanguageGenerated]");
             sb.AppendLine(padding + "public interface ISteamSerializable");
             sb.AppendLine(padding + "{");
             sb.AppendLine(padding + "\tvoid Serialize(Stream stream);");
             sb.AppendLine(padding + "\tvoid Deserialize( Stream stream );");
             sb.AppendLine(padding + "}");
 
+            sb.AppendLine(padding + "[SteamLanguageGenerated]");
             sb.AppendLine(padding + "public interface ISteamSerializableHeader : ISteamSerializable");
             sb.AppendLine(padding + "{");
             sb.AppendLine(padding + "\tvoid SetEMsg( EMsg msg );");
             sb.AppendLine(padding + "}");
 
+            sb.AppendLine(padding + "[SteamLanguageGenerated]");
             sb.AppendLine(padding + "public interface ISteamSerializableMessage : ISteamSerializable");
             sb.AppendLine(padding + "{");
             sb.AppendLine(padding + "\tEMsg GetEMsg();");
@@ -62,11 +65,13 @@ namespace SteamLanguageParser
 
             if ( supportsGC )
             {
+                sb.AppendLine( padding + "[SteamLanguageGenerated]" );
                 sb.AppendLine( padding + "public interface IGCSerializableHeader : ISteamSerializable" );
                 sb.AppendLine( padding + "{" );
                 sb.AppendLine( padding + "\tvoid SetEMsg( uint msg );" );
                 sb.AppendLine( padding + "}" );
 
+                sb.AppendLine( padding + "[SteamLanguageGenerated]" );
                 sb.AppendLine( padding + "public interface IGCSerializableMessage : ISteamSerializable" );
                 sb.AppendLine( padding + "{" );
                 sb.AppendLine( padding + "\tuint GetEMsg();" );
@@ -129,6 +134,8 @@ namespace SteamLanguageParser
 
             if ( enode.Flags == "flags" )
                 sb.AppendLine( padding + "[Flags]" );
+
+            sb.AppendLine( padding + "[SteamLanguageGenerated]" );
 
             if ( enode.Type != null )
             {
@@ -211,6 +218,8 @@ namespace SteamLanguageParser
             {
                 sb.AppendLine( padding + "[StructLayout( LayoutKind.Sequential )]" );
             }
+
+            sb.AppendLine(padding + "[SteamLanguageGenerated]");
 
             sb.AppendLine(padding + "public class " + cnode.Name + " : " + parent);
             sb.AppendLine(padding + "{");
